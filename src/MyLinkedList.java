@@ -15,7 +15,24 @@ public class MyLinkedList {
     }
     temp.next=toAdd;
 }
-void print(){
+
+
+    public void addRear( int data) {
+        Node node = new Node(data);
+        Node temp = head;
+        if (head == null) {
+            head = node;
+        } else {
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = node;
+            node = temp;
+        }
+    }
+
+
+    void print(){
     Node temp=head;
     while (temp !=null){
         System.out.println(temp.data+" ");
