@@ -33,7 +33,25 @@ public class LinkedList
         prev_node.next = new_node;
     }
 
-  
+    public void insertAtEnd(int data)
+    {
+        Node new_node = new Node(data);
+
+        if (head == null)
+        {
+            head = new Node(data);
+            return;
+        }
+
+        new_node.next = null;
+
+        Node last = head;
+        while (last.next != null)
+            last = last.next;
+
+        last.next = new_node;
+        return;
+    }
 
     void deleteNode(int position)
     {

@@ -1,18 +1,25 @@
-import java.util.Iterator;
 
 public class MainLinkedList {
     public static void main(String[] args) {
-        MyLinkedList myll= new MyLinkedList();
-     myll.add(70);
-     myll.addRear(30);
-     myll.add(56);
 
+        LinkedList llist = new LinkedList();
 
-         myll.print();
+        llist.insertAtEnd(1);
+        llist.insertAtBeginning(2);
+        llist.insertAtBeginning(3);
+        llist.insertAtEnd(4);
+        llist.insertAfter(llist.head.next, 5);
 
-       }
+        System.out.println("Linked list: ");
+        llist.printList();
 
+        System.out.println("\nAfter deleting an element: ");
+        llist.deleteNode(4);
+        llist.printList();
     }
+    }
+
+
 
 
 
